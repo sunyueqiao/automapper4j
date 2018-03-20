@@ -2,6 +2,10 @@ package com.github.sunyueqiao;
 
 import java.lang.reflect.Field;
 
+/**
+ * @author sunyueqiao
+ * @date 2018-3-20
+ * */
 public class AutoMapper {
     private Object sourceObj;
     private Object targetObj;
@@ -16,6 +20,10 @@ public class AutoMapper {
         return autoMapper;
     }
 
+    /**
+     * 获取源对象的属性
+     * @return 属性的数组对象
+     * */
     private Field[] getSourceObjectFields() {
         if (this.sourceObj == null) {
             System.out.println("源对象不能为null");
@@ -25,6 +33,10 @@ public class AutoMapper {
         return this.sourceObj.getClass().getDeclaredFields();
     }
 
+    /**
+     * 获取目标对象的属性
+     * @return 属性的数组对象
+     * */
     private Field[] getTargetObjectFields() {
         if (this.targetObj == null) {
             System.out.println("目标对象不能为null");
@@ -34,6 +46,9 @@ public class AutoMapper {
         return this.targetObj.getClass().getDeclaredFields();
     }
 
+    /**
+     * 映射
+     * */
     public Object mapping() {
         System.out.println("mapping");
         Field[] sourceObjFields = this.getSourceObjectFields();
