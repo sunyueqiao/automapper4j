@@ -1,1 +1,7 @@
+target/
+.mvn/wrapper/
+!.mvn/wrapper/maven-wrapper.jar
+.idea/
 .idea/*
+logs/
+**/.idea/**
